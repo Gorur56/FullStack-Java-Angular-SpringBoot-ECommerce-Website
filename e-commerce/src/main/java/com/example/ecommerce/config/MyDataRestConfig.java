@@ -29,7 +29,8 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions))
                 .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
 
-        /* Postman 'da aşağıdaki kodu POST method 'u ile gönderdiğmizde;
+        /* Postman 'da aşağıdaki kodu POST method 'u ile gönderdiğmizde; Veya PUT ve DELETE methodlarındada aynı
+           hatayı alacaktır.
             {
                  "test":"data"
             }
