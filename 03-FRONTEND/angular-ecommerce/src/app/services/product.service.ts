@@ -20,5 +20,9 @@ export class ProductService {
     );
   }
 
-  interface GetResponse
+  interface GetResponse {
+    _embedded: {
+      products: Product[];
+    }
+  }
 }

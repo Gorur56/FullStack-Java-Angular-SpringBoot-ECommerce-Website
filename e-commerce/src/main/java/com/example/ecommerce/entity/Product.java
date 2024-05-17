@@ -12,17 +12,14 @@ import java.util.Date;
 @Table(name = "product")
 @Data //For Lombok
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    //Tablo ilişkilerini kuruyoruz. @ManyToOne Ürünler  sadece 1 kategori ile  ilişkisi kurulur.
-    //Yani bir ürün birden fazla category ile ilişkilendirilemez.
-    //"category_id" alanı, "Product" tablosunda "ProductCategory" tablosuna bir referans oluşturur.
-    // nullable = false: Bu alan boş olamaz.
     @ManyToOne
-    @JoinColumn(name= "category_id", nullable = false)
+    @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
 
     @Column(name = "sku")
@@ -43,7 +40,7 @@ public class Product {
     @Column(name = "active")
     private boolean active;
 
-    @Column(name = "unit_in_stock")
+    @Column(name = "units_in_stock")
     private int unitsInStock;
 
     @Column(name = "date_created")
