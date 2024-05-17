@@ -11,6 +11,4 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // JpaRepository arayüzü,genellikle temel CRUD (Create, Read, Update, Delete)
     // işlemlerini gerçekleştirmek için kullanılır.
 
-
-
 }
