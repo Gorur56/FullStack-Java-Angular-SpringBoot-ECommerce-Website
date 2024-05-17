@@ -1,14 +1,14 @@
 export class Product {
-    //TypeScript class for Product
+    //DEVELOP TYPESCRIPT CLASS FOR PRODUCT: ng generate class common/product
     constructor(public sku: string,
-                public name: string,
-                public description: string,
-                public unitPrice: number,
-                public imageUrl: string,
-                public active: boolean,
-                public unitsInStock: number,
-                public dateCreated: Date,
-                public lastUpdated: Date){
-
+        public name: string,
+        public description: string,
+        public unitPrice: number,
+        public imageUrl: string,
+        public active: boolean,
+        public unitsInStock: number,
+        public dateCreated: Date,
+        public lastUpdated: Date
+    ) {
     }
 }
